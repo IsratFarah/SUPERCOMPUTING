@@ -22,18 +22,30 @@ Setting the variable name to make using commands easier
 fasta=GCF_000001735.4_TAIR10.1_genomic.fna 
 
 grep -c '^>' "$fasta" # Finds number of sequences (7)
+
 grep -v '^>' "$fasta" | tr -d '\n' | wc -c # Finds number of nucleotides excluding header lines/newlines (119,668,634)
+
 wc -l $fasta # Finds total number of lines (14)
+
 grep -c '^>.*mitochondrion' "$fasta" # Header lines that contain “mitochndrion”
+
 grep -c '^>.*chromosome' “$fasta” # Header lines that contain “chromosome”
+
 Finds how many nucleotides are in each of the first 3 chromosome sequences (30,427,672, 19,698,290,  23,459,831)
-- grep -A1 "chromosome 1" "$fasta" | tail -n 1 | tr -d '\n' | wc - grep -A1 "chromosome 2" "$fasta" | tail -n 1 | tr -d '\n' | wc 
-- grep -A1 "chromosome 3" "$fasta" | tail -n 1 | tr -d '\n' | wc 
-grep -A1 "chromosome 5" "$FA" | tail -n 1 | tr -d '\n' | wc -c # Finds number of nucleotides in 5th chromosome (26,975,503)
+
+- grep -A1 "chromosome 1" "$fasta" | tail -n 1 | tr -d '\n' | wc - grep -A1 "chromosome 2" "$fasta" | tail -n 1 | tr -d '\n' | wc
+- 
+- grep -A1 "chromosome 3" "$fasta" | tail -n 1 | tr -d '\n' | wc
+- 
+- grep -A1 "chromosome 5" "$FA" | tail -n 1 | tr -d '\n' | wc -c # Finds number of nucleotides in 5th chromosome (26,975,503)
+
 paste - - < "$FA" | grep -c 'AAAAAAAAAAAAAAAA' # Finds the frequency of that sequence 
+
 grep '^>' "$FA" | sort | head -n 1 # First sequence header by alphabetical order (>NC_000932.1 Arabidopsis thaliana chloroplast, complete genome)
+
 paste - - < "$fasta" > paired_sequences.tsv # Creates the .tsv file
-Reflection
+
+# Reflection
 
 My approach for this task was to work through the FASTA file one step at a time using some of the Unix command-line tools and try to gain an understanding of how the file was formatted before I 
 attempted to answer any questions. I started by displaying the file contents using commands such as head or less to check that the file contained a header line followed by a string of 
