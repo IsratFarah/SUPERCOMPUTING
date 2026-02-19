@@ -34,9 +34,7 @@ grep -c '^>.*chromosome' “$fasta” # Header lines that contain “chromosome�
 Finds how many nucleotides are in each of the first 3 chromosome sequences (30,427,672, 19,698,290,  23,459,831)
 
 - grep -A1 "chromosome 1" "$fasta" | tail -n 1 | tr -d '\n' | wc - grep -A1 "chromosome 2" "$fasta" | tail -n 1 | tr -d '\n' | wc
-- 
 - grep -A1 "chromosome 3" "$fasta" | tail -n 1 | tr -d '\n' | wc
-- 
 - grep -A1 "chromosome 5" "$FA" | tail -n 1 | tr -d '\n' | wc -c # Finds number of nucleotides in 5th chromosome (26,975,503)
 
 paste - - < "$FA" | grep -c 'AAAAAAAAAAAAAAAA' # Finds the frequency of that sequence 
