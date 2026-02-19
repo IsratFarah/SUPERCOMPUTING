@@ -4,12 +4,15 @@ Assignment_03
 # Task 1 - Making data directory in assignment_03
 
 cd SUPERCOMPUTING/assignments/assignment_03
+
 mkdir data 
 
 # Task 2—Download the FASTA sequence file 
 
 cd data 
+
 wget https://gzahn.github.io/data/GCF_000001735.4_TAIR10.1_genomic.fna.gz
+
 gunzip GCF_000001735.4_TAIR10.1_genomic.fna.gz
 
 # Task 3 - Use unix tools to explore the file contents 
