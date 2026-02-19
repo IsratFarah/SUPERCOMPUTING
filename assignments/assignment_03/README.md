@@ -3,7 +3,7 @@ Assignment_03
 
 # Task 1 - Making data directory in assignment_03
 
-cd SUPERCOMPUTING/assignments/assignment_03
+cd SUPERCOMPUTING/assignments/assignment_03/n
 mkdir data 
 
 # Task 2—Download the FASTA sequence file 
