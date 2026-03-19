@@ -195,7 +195,7 @@ tail \-n 10 assemblies/assembly\_local/local\_flye.log
 
 \#\!/bin/bash
 
-set \-e
+set \-euo
 
 bash scripts/01\_download\_data.sh  
 bash scripts/02\_flye\_2.9.6\_manual\_build.sh  
